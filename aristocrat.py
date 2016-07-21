@@ -1,3 +1,6 @@
+##Simple Substutition cipher without spaces left between the wordpress
+
+
 import string
 from cipher import *
 from cipher import Cipher
@@ -67,13 +70,13 @@ class AristocratSolver(CipherSolver):
     print data.strip("n")
 
   def frequency_list(self, length = 1, text = ""):
-            """Displays counts for frequencies of characters"""
+    """Displays counts for frequencies of characters"""
     text = Cipher.encrypt(self.cipher, text)
     self.print_counts(shared.calc_graphs(text.split(" "), int(length)))
 
 
   def keys(self):
-        """Displays the plaintext and ciphertext keys."""
+    """Displays the plaintext and ciphertext keys."""
     print "ct:", self.cipher.ctkey, "npt:", self.cipher.ptkey, "n"
     values = zip(self.cipher.ptkey, self.cipher.ctkey)
     values.sort()
@@ -89,6 +92,6 @@ class AristocratSolver(CipherSolver):
     """Sets the plaintext equivalent for each ciphertext character.
     You can enter multiple letters at a time.
     Enter a single dash '-' to set the plaintext characters to blank."""
-    
+
     self.cipher.set(ct,pt)
     self.display()

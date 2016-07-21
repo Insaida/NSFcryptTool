@@ -69,15 +69,11 @@ class CipherSolver(object):
   def solve(self):
     while True:
       try:
-        '''
+   
         raw_line = raw_input(self.prompt + " ")
-        line = re.findall('\'[^\']*\'|"[^"]*"|S+', raw_line)                      #Run expression through regex
-        line = [item[1:-1] if item[0] in '\'"' else item for item in line]        #Strip off begining & ending quotes  '''
-
-        raw_line = raw_input(self.prompt + " ")
-        line = raw_line
-        line = re.findall('\'[^\']*\'|"[^"]*"|S+', raw_line)
-        line = [item[1:-1] if item[0] in '\'"' else item for item in line]
+       # line = raw_line
+        line = re.findall('\'[^\']*\'|"[^"]*"|S+', raw_line)                          #Run expression through regex
+        line = [item[1:-1] if item[0] in '\'"' else item for item in line]            #Strip off begining & ending quotes
 
 
           #The issue is around this line.
@@ -85,7 +81,7 @@ class CipherSolver(object):
             # a  mistake somewhere
           
         print ""
-     #   cmd = line.copy()
+     #   
         cmd = line.pop(0)
         attr = None
         if cmd in self.shortcuts:

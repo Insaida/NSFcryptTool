@@ -13,7 +13,7 @@ if __name__ == '__main__':
   while True:
     shared.clear_screen()
     print "-" * 37
-    print "    Interactive Cryptogram Solver"
+    print "    NaijaSecForce Cryptogram Solver"
     print "-" * 37
     print "Type a cipher type or partial (q to quit) [all]: ",
     cmd = raw_input().lower()

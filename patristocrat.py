@@ -1,3 +1,6 @@
+##Simple Substutition cipher without spaces left between the wordpress
+
+
 import string
 import shared
 from cipher import Cipher
